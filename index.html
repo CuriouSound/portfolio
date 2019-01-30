@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="wrapper">
+        <div class="overlay">
+                <h1>Bienvenue chez moi</h1>
+        </div>
+        
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">Notarianni Robin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarsExample07">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link cool-link" href="#apropos">A PROPOS <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link cool-link" href="#mesprojets">MES PROJETS</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link cool-link" href="#contact">CONTACT</a>
+                </li>
+                
+              </ul>
+              
+              
+            </div>
+
+           </div>
+          
+        </nav>
+        
+        <div class="container hue">
+          <div class="row">
+              <div class="col"></div>
+                <div class="col-md-10 ligne">
+                  <div class="height100">
+                        <section>
+                          <div class="robin">
+                            <p class="text-center">Robin Notarianni</p>
+                            <p class="text-center">Développeur Web Junior</p>
+                          </div>
+                          
+                          <div class="scrolldown">
+                            <p class="text-center">Scroll down</p>
+                          
+                            <div class="bounce">
+                              <a class="flecheapropos " href="www.mcdonalds.com"><i class="text-center mx-auto fas fa-3x fa-angle-double-down"></i></i></a>
+                            </div>
+                          </div>
+                        </section>
+
+
+                        <section>
+
+
+                  
+                        <div class="separation"></div>
+
+
+                        <div class="separation2"></div>
+                        </section>
+
+
+
+                      
+                        
+                      
+                  </div>
+              </div>
+              <div class="col"></div>
+          </div>
+        </div>
+        
+        
+    <script type="text/javascript">
+     $(document).ready(function(){
+
+      window.onbeforeunload = function () {
+window.scrollTo(0, 0);
+};
+console.log(window.scrollY);
+window.scrollTo(0,0);
+document.getElementById('body').style.overflowY='hidden';
+console.log(window.scrollY);
+var position= $(window).scrollTop();
+
+        $(document).ready(function(){
+        
+          
+        
+            TweenMax.to(".overlay h1", 2, {
+                opacity: 0,
+                y: -60,
+                ease: Expo.easeInOut
+            })
+    
+            TweenMax.to(".overlay", 2, {
+                delay: 1,
+                top: "-100%",
+                ease: Expo.easeInOut
+            })
+    
+            TweenMax.from(".logo", 1, {
+                delay: 2.4,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut
+            })
+            
+            TweenMax.from(".nav-wrapper", 2, {
+                delay: 2.4,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut
+            })
+
+            TweenMax.from("#nav", 1, {
+                delay: 2.4,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut
+            })
+            
+            TweenMax.from(".nav", 2, {
+                delay: 2.4,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut
+            })
+            TweenMax.from(".fixed-top", 2, {
+                delay: 2.4,
+                opacity: 0,
+                y: 20,
+                ease: Expo.easeInOut
+            })
+            
+            TweenMax.from(".ligne", 3, {
+                delay: 2.9,
+                opacity: 0,
+                x: 90,
+                ease: Expo.easeInOut
+            })
+            
+    
+           
+    
+    
+            
+        
+        });
+
+        
+  setTimeout(
+    function() {
+      document.getElementById('body').style.overflowY='visible';
+      
+    }, 5400);
+
+    $(window).scrollTop(position);
+        
+});
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
