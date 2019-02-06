@@ -80,7 +80,7 @@ html, body {
 }
 /* navbar */
 nav{
-    background-color:rgba(58,64,90,0.99) !important;
+    background-color:rgba(58,64,90,1.0) !important;
     
 }
 
@@ -135,6 +135,7 @@ li a {
     font-family:"avenir";
     font-size:1.75rem;
 }
+
 
 
 /* animation de la fleche qui rebondit */
@@ -204,9 +205,21 @@ a .flecheapropos{
     width:200px;
     left:50%;
     margin-left:-100px;
-   
+   text-decoration:none;
    
 }
+.text-center{
+    text-decoration: none !important ;
+    color:black;
+}
+.scrolltoanchor1{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-decoration:none;
+}
+
 /* FIN PREMIERE SECTION */
 
 .separation{
@@ -231,4 +244,20 @@ a .flecheapropos{
 .height2{
     height:100vh;
     margin-top:100vh;
+    padding-top:5vh;
+    
+    background-color:blue;
+    width:100% !important;
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    right:0px;
+    
+}
+
+
+.txtmoi{
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:10vh;
 }
