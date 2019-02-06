@@ -11,11 +11,15 @@
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
+
+
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
   <div class="wrapper">
         <div class="overlay">
@@ -32,13 +36,14 @@
             <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarsExample07">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link cool-link" href="#apropos">A PROPOS <span class="sr-only">(current)</span></a>
+                  
+                  <a class="nav-link cool-link" href="#one" rel=""  class="test">A PROPOS </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link cool-link" href="#mesprojets">MES PROJETS</a>
+                  <a class="nav-link cool-link" href="#2">MES PROJETS</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link cool-link" href="#contact">CONTACT</a>
+                  <a class="nav-link cool-link" href="#3">CONTACT</a>
                 </li>
                 
               </ul>
@@ -55,8 +60,8 @@
               <div class="col"></div>
                 <div class="col-md-10 ligne">
                   <div class="height100">
-                        <section>
-                          <div class="robin">
+                       
+                          <div class="robin justify-content-center align-self-center">
                             <p class="text-center">Robin Notarianni</p>
                             <p class="text-center">Développeur Web Junior</p>
                           </div>
@@ -68,25 +73,20 @@
                               <a class="flecheapropos " href="www.mcdonalds.com"><i class="text-center mx-auto fas fa-3x fa-angle-double-down"></i></i></a>
                             </div>
                           </div>
-                        </section>
-
-
-                        <section>
-
-
-                  
-                        <div class="separation"></div>
-
-
-                        <div class="separation2"></div>
-                        </section>
-
-
-
-                      
                         
+
+
+                       
+                      </div>
+                      <div class="height2" id="one">
+                        ssfddsffdsfdsdfs
+                      </div>
                       
-                  </div>
+
+
+
+
+                      
               </div>
               <div class="col"></div>
           </div>
@@ -99,16 +99,19 @@
       window.onbeforeunload = function () {
 window.scrollTo(0, 0);
 };
-console.log(window.scrollY);
-window.scrollTo(0,0);
-document.getElementById('body').style.overflowY='hidden';
-console.log(window.scrollY);
-var position= $(window).scrollTop();
+
+
 
         $(document).ready(function(){
         
-          
+          $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top - 200
+    }, 1500);
+});
         
+          
             TweenMax.to(".overlay h1", 2, {
                 opacity: 0,
                 y: -60,
@@ -163,13 +166,13 @@ var position= $(window).scrollTop();
             })
             
     
-           
+
     
     
             
         
         });
-
+        
         
   setTimeout(
     function() {
@@ -178,6 +181,9 @@ var position= $(window).scrollTop();
     }, 5400);
 
     $(window).scrollTop(position);
+
+
+    
         
 });
 
