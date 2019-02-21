@@ -1,0 +1,137 @@
+/******************************************* FORMULAIRE DE CONTACT *******************************************/
+/***************** GENERAL *****************/
+#coordonnee, #formulaireContact {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left:auto;
+    margin-right:auto;
+}
+#rowContact {
+    height: 100vh;
+}
+
+/***************** FORMULAIRE *****************/
+#formulaireContact h2
+{   text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+}
+#parentContact {
+    display: flex !important;
+    justify-content: center !important;
+    width:100%;
+    font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+}
+#formulaireContact {
+    padding-top: 150px;
+}
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    width: 40vh;
+}
+input {
+    width: 100%;
+    height: 30px;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    max-height: 200px;
+}
+form button {
+    margin: 0 auto;
+    display: block !important;
+    background-color: rgb(58,64,90) !important;
+    font-size: 1.2em!important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/************ Couleur messages d'erreur ***********/
+::-webkit-input-placeholder {
+    color: black;
+    font-family: sans-serif;
+}
+:-moz-placeholder { /* Firefox 15- */
+    color: black;
+    font-family: sans-serif;
+}
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: black;
+    font-family: sans-serif;
+}
+
+:-ms-input-placeholder {  
+    color: black;
+    font-family: sans-serif;
+}
+
+/***************** COORDONNEE *****************/
+#coordonnee {
+    background-color: rgb(12, 12, 12);
+    font-size: 1em;
+    font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+}
+#coordonnee {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#coordonnee p {
+    padding-top: 30px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+#coordonnee #monMail {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+#coordonnee div {
+    padding: 20px 0;
+}
+#coordonnee h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+#coordonnee img {
+    margin-top: 15px;
+    box-sizing: border-box;
+    height: 60px;
+    margin-bottom: 50px;
+}
+
+/******************************************* MEDIA QUERIES *******************************************/
+@media screen and (max-width: 992px) {
+    html, body  {
+       
+    }
+    #infoCoordonnee {
+        padding-right: 10px;
+    }
+    h2 {
+        font-size: 1.8em !important;
+    }
+    #formulaireContact {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    #formulaireContact h2 {
+        margin-bottom: 40px;
+    }
+    #infoCoordonnee {
+        padding-top: 80px;
+    }
+}
+@media screen and (min-width: 992px) {
+    html, body  {
+        
+    }
+    #infoCoordonnee {
+        height: 70vh;
+    }
+}

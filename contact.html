@@ -1,0 +1,112 @@
+{% extends "template.twig" %}
+
+{% block style %}
+
+	<link rel="stylesheet" href="Assets/CSS/contact.css">
+
+{% endblock %}
+
+{% block header %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navContact">
+
+        <div class="container">
+
+            <!-- <a class="navbar-brand" href="home"><img src="Assets/Images/logonfnoir.png" alt="logoNF" width="50px"></a> -->
+            <a class="navbar-brand logoWD" href="home">WD</a>
+
+            <!-- <a class="nom nomLight" id="nomMobile" href="home">Titre Responsive</a> -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+                <a class="nav-link" href="home">Accueil
+                    <span class="sr-only">(current)</span>
+                </a>
+                </li>
+
+                <li class="nav-item active">
+                <a class="nav-link" href="profil">Profil</a>
+                </li>
+
+                <li class="nav-item active">
+                <a class="nav-link" href="contact">Contact</a>
+                </li>
+
+            </ul>
+
+            </div> <!-- Fin div navbar -->
+
+        </div> <!-- Fin div container -->
+    </nav>
+{% endblock header %}
+
+{% block main %}
+
+    <div class="container-fluid" id="pageContact">
+
+        <div  id="rowContact" class="row">
+            
+            <!-- ============================================================= SECTION FORMULAIRE ============================================================= -->
+            <div id="formulaireContact" class="col-sm-12 col-md-12 col-lg-9" >
+                <h2>Formulaire de Contact</h2>
+
+                {% if reponse != NULL %}
+                    <p> {{ reponse }} </p>
+                {% endif %}
+
+                <div id="parentContact"> 
+                    <form id="formulaire" name='formulaire' action="contact" method="POST">
+                        <label for="nom">Nom :</label> <br>
+                        <input type="text" name="nom" id='nom'> <br>
+
+                        <label for="entreprise">Entreprise :</label> <br>
+                        <input type="text" name="entreprise" id="entreprise"> <br>
+
+                        <label for="mail">E-mail :</label> <br>
+                        <input type="text" name="mail" id="mail"> <br>
+
+                        <label for="message">Message :</label> <br>
+                        <textarea name="message" id="message" rows="60";></textarea> <br>
+                        
+                        <button type="submit" value="Envoyer" class="btn btn-dark pull-right">Valider</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ============================================================= SECTION COORDONNEE ============================================================= -->
+            <div id="coordonnee" class="col-sm-12 col-md-12 col-lg-3">
+                <div id="coordonneeBis">
+
+                    <div id="mail">
+                        <h3>E-MAIL</h3> 
+                        <p id="monMail">francois.nathan@gmail.com</p> 
+                    </div>
+                    <div>
+                        <h3>GITHUB</h3>
+                        <a href="https://github.com/JauneLoke"><img src="Assets/Images/logoGitWhite.png" alt="logoGitHub"></a>
+                    </div>
+                    <div>
+                        <h3>LINKEDIN</h3>
+                        <a href="https://www.linkedin.com/in/nathan-f-a07995178/"><img src="Assets/Images/logo2.png" alt="logoLinkedin"></a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div> <!-- Fin Row -->
+        
+    </div> <!-- Fin Container -->
+
+{% endblock main %}
+
+{% block script %}
+
+    <script src="Assets/JS/mail.js"></script>
+
+{% endblock script %}
